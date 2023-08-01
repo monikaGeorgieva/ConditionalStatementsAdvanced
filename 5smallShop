@@ -1,0 +1,70 @@
+function solve(input){
+   let product = input[0];
+   let town = (input[1]);
+   let quantity = Number(input[2]);
+
+   let total = 0;
+   switch (town) {
+    case "Sofia": 
+       if (product === "coffee") {
+        total += quantity * 0.50;
+        console.log(total)
+       }else if (product === "water") {
+        total += quantity * 0.80;
+        console.log(total);
+       }else if (product === "beer") {
+        total += quantity * 1.20;
+        console.log(total);
+       }else if (product === "sweets") {
+        total += quantity * 1.45;
+        console.log(total);
+       }else if (product === "peanuts") {
+        total += quantity * 1.60;
+        console.log(total);
+       }
+       break;
+    case "Plovdiv":
+        if (product === "coffee") {
+            total += quantity * 0.40;
+            console.log(total)
+           }else if (product === "water") {
+            total += quantity * 0.70;
+            console.log(total);
+           }else if (product === "beer") {
+            total += quantity * 1.15;
+            console.log(total);
+           }else if (product === "sweets") {
+            total += quantity * 1.30;
+            console.log(total);
+           }else if (product === "peanuts") {
+            total += quantity * 1.50;
+            console.log(total);
+           }
+        break;
+    case "Varna":
+        if (product === "coffee") {
+            total += quantity * 0.45;
+            console.log(total)
+           }else if (product === "water") {
+            total += quantity * 0.70;
+            console.log(total);
+           }else if (product === "beer") {
+            total += quantity * 1.10;
+            console.log(total);
+           }else if (product === "sweets") {
+            total += quantity * 1.35;
+            console.log(total);
+           }else if (product === "peanuts") {
+            total += quantity * 1.55;
+            console.log(total);
+           }
+        break;
+    default:
+        break;
+   }
+}
+solve(["coffee","Varna","2"]);
+solve(["peanuts", "Plovdiv", "1"]);
+solve(["beer", "Sofia", "2"]);
+solve(["water", "Plovdiv", "2"]);
+solve(["sweets", "Sofia", "2.23"]);
