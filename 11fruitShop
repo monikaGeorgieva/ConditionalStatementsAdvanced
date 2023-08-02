@@ -1,0 +1,63 @@
+function solve(input) {
+    let fruit = input[0];
+   let day = input[1];
+   let fruitCount = Number(input[2]);
+
+   let total = 0;
+   switch (day) {
+    case "Monday":
+    case "Tuesday":
+    case "Wednesday":
+    case "Thursday":
+    case "Friday": 
+        if (fruit == "banana") {
+            total = fruitCount * 2.50;
+        }else if (fruit == "apple") {
+            total = fruitCount * 1.20;
+        }else if (fruit == "orange") {
+            total = fruitCount * 0.85;
+        }else if (fruit == "grapefruit") {
+            total = fruitCount * 1.45;
+        }else if (fruit == "kiwi") {
+            total = fruitCount * 2.70;
+        }else if (fruit == "pineapple") {
+            total = fruitCount * 5.50;
+        }else if (fruit == "grapes") {
+            total = fruitCount * 3.85;
+        }else{
+            console.log("error");
+        }
+        break;
+
+    case "Saturday":
+    case "Sunday":
+            if (fruit == "banana") {
+                total = fruitCount * 2.70;
+            }else if (fruit == "apple") {
+                total = fruitCount * 1.25;
+            }else if (fruit == "orange") {
+                total = fruitCount * 0.90;
+            }else if (fruit == "grapefruit") {
+                total = fruitCount * 1.60;
+            }else if (fruit == "kiwi") {
+                total = fruitCount * 3.00;
+            }else if (fruit == "pineapple") {
+                total = fruitCount * 5.60;
+            }else if (fruit == "grapes") {
+                total = fruitCount * 4.20;
+            }else{
+                console.log("error")
+            }
+            
+            break;
+    default:
+        console.log("error")
+        break;
+   }
+   if (total != 0) {
+    console.log(total.toFixed(2))
+   }
+ }
+ 
+
+solve(["apple","Tuesday","2"])
